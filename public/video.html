@@ -2,7 +2,7 @@
  * @Author: chuzhengyang.ex
  * @Date: 2025-05-13 10:39:19
  * @LastEditors: chuzhengyang.ex
- * @LastEditTime: 2025-05-13 15:47:07
+ * @LastEditTime: 2025-05-13 15:56:53
  * @Description: 
  * @FilePath: \czy-pages\public\video.html
 -->
@@ -46,8 +46,8 @@
       },
       methods: {
         handlePlay: function () {
-            console.log(11111, "播放视频")
-          postMessage({
+            console.log(11111, "播放视频", JSON.stringify(uni))
+          uni.postMessage({
             data: {
                 msg: "播放视频",
                 time: new Date()
@@ -56,7 +56,7 @@
         },
         handlePause: function (htmlString = "") {
             console.log(22222, "暂停视频")
-            postMessage({
+            uni.postMessage({
             data: {
                 msg: "暂停视频",
                 time: new Date()
