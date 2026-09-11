@@ -1,22 +1,23 @@
-import {
-  createRouter,
-  createWebHashHistory,
-  RouteRecordRaw
-} from 'vue-router'
-import Home from '@/views/home.vue'
-import Login from '@/views/login.vue'
+import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
+import Home from "@/views/home.vue";
+import Login from "@/views/login.vue";
 // import Vuex from '@/views/vuex.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "Home",
+    component: Home,
   },
   {
-    path: '/login',
-    name: 'Login',
-    component: Login
+    path: "/login",
+    name: "Login",
+    component: Login,
+  },
+  {
+    path: "/kksoSearch",
+    name: "KksoSearch",
+    component: () => import("@/views/kksoSearch.vue"), // 懒加载组件
   },
   // {
   //   path: '/vuex',
@@ -28,11 +29,11 @@ const routes: Array<RouteRecordRaw> = [
   //   name: 'Axios',
   //   component: () => import('@/views/axios.vue') // 懒加载组件
   // }
-]
+];
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

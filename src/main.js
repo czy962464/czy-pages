@@ -3,13 +3,15 @@
  * @Date: 2025-05-13 10:34:19
  * @LastEditors: chuzhengyang.ex
  * @LastEditTime: 2025-05-13 11:19:18
- * @Description: 
+ * @Description:
  * @FilePath: \czy-pages\src\main.js
  */
-import './assets/main.css'
+// import "./assets/main.css";
 
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router/index.ts'
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router/index.ts";
+import Vant from "vant";
+import "vant/lib/index.css";
 
-createApp(App).use(router).mount('#app')
+createApp(App).use(router).use(Vant).mount("#app");
