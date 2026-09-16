@@ -1,6 +1,6 @@
 <template>
   <div style="padding: 16px">
-    <h2 style="margin-bottom: 20px">资源搜索</h2>
+    <h2 style="margin-bottom: 20px">KKSO 资源搜索</h2>
 
     <!-- 关键词输入框 -->
     <van-field

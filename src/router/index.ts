@@ -1,7 +1,5 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import Home from "@/views/home.vue";
-import Login from "@/views/login.vue";
-// import Vuex from '@/views/vuex.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -10,25 +8,20 @@ const routes: Array<RouteRecordRaw> = [
     component: Home,
   },
   {
-    path: "/login",
-    name: "Login",
-    component: Login,
-  },
-  {
     path: "/kksoSearch",
     name: "KksoSearch",
     component: () => import("@/views/kksoSearch.vue"), // 懒加载组件
   },
-  // {
-  //   path: '/vuex',
-  //   name: 'Vuex',
-  //   component: Vuex
-  // },
-  // {
-  //   path: '/axios',
-  //   name: 'Axios',
-  //   component: () => import('@/views/axios.vue') // 懒加载组件
-  // }
+  {
+    path: "/zresoSearch",
+    name: "ZresoSearch",
+    component: () => import("@/views/zresoSearch.vue"), // 懒加载组件
+  },
+  {
+    path: "/daohang",
+    name: "Daohang",
+    component: () => import("@/views/daohang.vue"), // 懒加载组件
+  },
 ];
 
 const router = createRouter({

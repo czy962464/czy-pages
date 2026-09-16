@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
     "vant": "^4.10.2",
@@ -15,7 +16,9 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.3",
+    "typescript": "^7.0.2",
     "vite": "^6.2.4",
-    "vite-plugin-vue-devtools": "^7.7.2"
+    "vite-plugin-vue-devtools": "^7.7.2",
+    "vue-tsc": "^3.3.11"
   }
 }
